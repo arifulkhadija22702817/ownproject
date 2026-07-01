@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* scrollbar */
+.project-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #9333ea #270a3b;
+}
+
+.project-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.project-scroll::-webkit-scrollbar-track {
+  background: #270a3b;
+}
+
+.project-scroll::-webkit-scrollbar-thumb {
+  background: #9333ea;
+  border-radius: 10px;
+}
+
+/* animation */
+.moving-border {
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #22c55e, transparent);
+  top: 0;
+  left: -80px;
+  animation: moveBorder 3s linear infinite;
+}

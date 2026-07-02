@@ -36,7 +36,9 @@ const router = createBrowserRouter([
   }
 ],
   {
-    basename: "/ownproject/"
+    basename: import.meta.env.VITE_DEPLOY_TARGET === "github"
+      ? "/ownproject"
+      : "/",
   }
 );
 createRoot(document.getElementById('root')).render(

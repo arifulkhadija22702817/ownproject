@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { HiPlus } from "react-icons/hi";
 
 class Project extends Component {
     state = {
@@ -88,22 +89,23 @@ class Project extends Component {
                             <div
                                 key={project.id}
                                 className="
-          bg-[#270a3b]
+          bg-[#0d0425]
           rounded-xl
           px-6
           py-4
           border border-[#2d1248]
           hover:border-purple-500
-          transition-all duration-300"
+          transition-all duration-300
+          cursor-pointer"
                             >
                                 <div className="flex justify-between items-center" onClick={() => window.open(project.link, "_blank")}>
 
-                                    <div>
-                                        <h2 className="text-pink-400 text-xl font-semibold">
+                                    <div className="text-start">
+                                        <h2 className="text-purple-500 text-xl font-semibold">
                                             {project.name}
                                         </h2>
 
-                                        <p className="text-gray-400 text-sm">
+                                        <p className="text-pink-600 text-sm">
                                             Click to visit project
                                         </p>
                                     </div>
@@ -117,7 +119,7 @@ class Project extends Component {
               hover:bg-purple-500
               text-white"
                                     >
-                                        +
+                                        <HiPlus></HiPlus>
                                     </button>
 
                                 </div>
